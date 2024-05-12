@@ -11,11 +11,12 @@ import { UsersService } from './services/users.service';
 export class AppComponent {
 
   user$= this.usersServices.currentUserProfile$;
+  
   title(title: any) {
     throw new Error('Method not implemented.');
   }
 
-  constructor(public authService: AuthenticationService , private router: Router, private usersServices: UsersService){ }
+  constructor(private authService: AuthenticationService , private router: Router, private usersServices: UsersService){ }
 
   logout() {
     this.authService.logout().subscribe(() => {

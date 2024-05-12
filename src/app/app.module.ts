@@ -23,6 +23,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { ProfileComponent } from './components/profile/profile.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatListModule } from '@angular/material/list'
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     provideStorage(() => getStorage()),
     provideFirestore(() => getFirestore()),
     MatMenuModule,
-    MatMenuTrigger
+    MatMenuTrigger,
+    MatAutocompleteModule,
+    MatListModule,
+    MatDividerModule
     
   ],
   providers: [
