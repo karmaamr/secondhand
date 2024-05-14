@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { LandingComponent } from './components/landing/landing.component';
@@ -26,6 +26,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatListModule } from '@angular/material/list'
 import { MatDividerModule } from '@angular/material/divider';
+import { ListingCreationComponent } from './components/listing-creation/listing-creation.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { MatDividerModule } from '@angular/material/divider';
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ListingCreationComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,9 @@ import { MatDividerModule } from '@angular/material/divider';
     MatMenuTrigger,
     MatAutocompleteModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    CommonModule,
+    FormsModule
     
   ],
   providers: [
